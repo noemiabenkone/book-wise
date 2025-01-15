@@ -1,4 +1,4 @@
-import { House, Search, Heart } from "lucide-react"
+import { House, Search, Heart, Shuffle, SkipBack, Play, SkipForward, Repeat } from "lucide-react"
 
 export default function Home() {
   return (
@@ -20,8 +20,24 @@ export default function Home() {
           Explore livros de programação e melhore suas habilidades!
         </p>
       </main>
-      <footer>
-        
+      <footer className="flex flex-col items-center">
+        <div className="flex items-center gap-6">
+       < Shuffle size={20} className="text-zinc-600" />
+       <SkipBack size={20} className="text-zinc-600" />
+       <button className="w-10 h-10 flex items-center justify-center pl-1 rounded-full bg-white text-black ml-auto mr-8 group-houver:visible">
+       <Play />
+       </button>
+       <SkipForward size={20} className="text-zinc-600"/>
+       <Repeat size={20} className="text-zinc-600"/>
+        </div>
+        <div className="flex items-center gap-2">
+          <span className="text-xs text-zinc-500">0:31</span>
+          <div className="h-1 rounded-full w-96 bg-zinc-600">
+            <div className="h-1 w-40 bg-zinc-200 rounded-full"></div>
+          </div>
+          <span className="text-xs text-zinc-500">0:31</span>
+
+        </div>
       </footer>
     </div>
   );
